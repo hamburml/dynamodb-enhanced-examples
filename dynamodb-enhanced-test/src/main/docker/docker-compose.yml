@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  dynamodb-enhanced-test:
+    image: "zenbo/dynamodb-enhanced-test:1.0.0-SNAPSHOT"
+    ports:
+      - "8080:8080"
+    links:
+      - dynamodb
+  dynamodb:
+    image: "amazon/dynamodb-local:1.19.0"
+    expose:
+      - "8000"

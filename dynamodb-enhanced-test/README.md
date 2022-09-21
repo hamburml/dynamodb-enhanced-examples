@@ -60,5 +60,6 @@ Easily start your RESTful Web Services
 [Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
 
 - build native
-mvn package -Pnative -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true 
-docker run -i --rm zenbo/dynamodb-enhanced-test:1.0.0-SNAPSHOT
+- mvn package -Pnative -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true 
+- docker run -i --rm michaelhamburger/dynamodb-enhanced-test:1.0.0-SNAPSHOT
+- docker run --rm --publish 8000:8000 amazon/dynamodb-local:1.19.0 -jar DynamoDBLocal.jar -inMemory -sharedDb
